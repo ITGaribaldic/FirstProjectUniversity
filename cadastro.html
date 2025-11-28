@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta e links CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Título da página -->
+    <title>Cadastro do Cliente do Pet</title>
+</head>
+
+<body>
+    <header>
+        <!-- Header: título do site e menu de navegação -->
+        <h1>Pet Shop Pé de Paz</h1>
+        <nav>
+            <a href="index.html">Página Inicial</a> |
+            <a href="cadastro.html">Cadastro</a> |
+            <a href="agendamento.html">Agendamento</a>
+        </nav>
+    </header>
+    <!-- Formulário de cadastro -->
+    <h1>Cadastro do Cliente e do Pet</h1>
+    <div class="container mt-4">
+        <form>
+            <!-- Seção: dados do cliente -->
+            <h2>Dados do Cliente</h2>
+            <div class="mb-3">
+                <label for="nomeCliente" class="form-label">Nome do Cliente</label>
+                <input type="text" class="form-control" id="nomeCliente" name="nomeCliente"
+                placeholder="Digite o nome completo" required>
+            </div> 
+            <div class="mb-3">
+                <label for="enderecoCliente" class="form-label">Endereço Completo</label>
+                <input type="text" class="form-control" id="enderecoCliente" name="enderecoCliente"
+                placeholder="Digite o endereço completo" required>
+            </div>
+            <div class="mb-3">
+                <label for="cpfCliente" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpfCliente" name="cpfCliente"
+                placeholder="Digite o CPF" required maxlength="14">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sexo</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sexoCliente" id="sexoMasculino" value="Masculino" required>
+                    <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                </div>
+            
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexoCliente" id="sexoFeminino" value="Feminino">
+                <label class="form-check-label" for="sexoFeminino">Feminino</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="telefoneCliente" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefoneCliente" name="telefoneCliente"
+                placeholder="Digite o telefone" required maxlength="15">
+            </div>
+            <div class="mb-3">
+                <label for="emailCliente" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="emailCliente" name="emailCliente"
+                placeholder="Digite o e-mail" required>
+            </div>
+            <!-- Seção: dados do pet -->
+            <h2 class="mt-4">Dados do Pet</h2>
+            <div class="mb-3">
+                <label for="nomePet" class="form-label">Nome do Pet</label>
+                <input type="text" class="form-control" id="nomePet" name="nomePet"
+                placeholder="Digite o nome do pet" required>
+            </div>
+            <div class="mb-3">
+                <label for="racaPet" class="form-label">Raça do Pet</label>
+                <input type="text" class="form-control" id="racaPet" name="racaPet"
+                placeholder="Digite a raça do pet" required>
+            </div>
+            <div class="mb-3">
+                <label for="idadePet" class="form-label">Idade do Pet (anos)</label>
+                <input type="number" class="form-control" id="idadePet" name="idadePet"
+                placeholder="Informe a idade" required min="0" max="30">
+            </div>
+
+            <!-- Botão de envio do formulário -->
+            <button type="submit" class="btn btn-success mt-3">Cadastrar</button>
+    
+        </form>
+
+    </div>
+<!-- Scripts JS -->
+<script src="js/main.js"></script>
+<script>
+    // Submissão do formulário com alerta e redirecionamento
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Cadastro realizado com sucesso!');
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 2000);
+    });
+</script>
+</body>
+</html>

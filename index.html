@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Configurações básicas da página -->
+    <!-- Meta e links CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Título exibido na aba do navegador -->
+    
+    <!-- Título da página -->
     <title>Pet Shop Pé de Paz</title>
 </head>
 <body>
 
-    <!-- Cabeçalho com título do site e links de navegação interna -->
+    <!-- Header: título do site e menu de navegação -->
     <header>
         <h1>Pet Shop Pé de Paz</h1>
         <nav>
             <a href="#alimentacao">Alimentação</a> |
             <a href="#medicamentos">Medicamentos</a> |
             <a href="#produtos">Produtos</a> |
-            <a href="#servicos">Serviços</a>
+            <a href="#servicos">Serviços</a> |
+            <a href="cadastro.html">Cadastro</a> |
+            <a href="agendamento.html">Agendamento</a>
         </nav>
     </header>
 
+    <!-- Carrossel: imagens de destaque com controles acessíveis e descrições (alt) -->
+    <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" id="PetShopCarrossel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="imagens/layout/slide1.jpg" class="d-block w-100" alt="Medicamento para eles">
+            </div>
+            <div class="carousel-item">
+            <img src="imagens/layout/slide2.jpg" class="d-block w-100" alt="Seu Pet é nossa Paixão">
+            </div>
+            <div class="carousel-item">
+            <img src="imagens/layout/slide4.jpg" class="d-block w-100" alt="A Saúde do Seu Pet">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#PetShopCarrossel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#PetShopCarrossel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+      
     <main>
 
         <!-- Seção: Alimentação dos Pets -->
@@ -108,7 +135,7 @@
 
     </main>
 
-    <!-- Rodapé com navegação, contatos e informações do estabelecimento -->
+    <!-- Footer: contatos, navegação e informações do estabelecimento -->
     <footer>
     <p><strong>© 2025 Pet Shop Pé de Paz</strong></p>
 
@@ -123,7 +150,9 @@
         <a href="#alimentacao">Alimentação</a> |
         <a href="#medicamentos">Medicamentos</a> |
         <a href="#produtos">Produtos</a> |
-        <a href="#servicos">Serviços</a>
+        <a href="#servicos">Serviços</a> |
+        <a href="cadastro.html">Cadastro</a> |
+        <a href="agendamento.html">Agendamento</a>
     </p>
 
     <p>
@@ -132,7 +161,8 @@
         CNPJ: 42.695.231/0001-07 | IE: 356.383.123
     </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-   
+
 </html>
